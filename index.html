@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Param Raj | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">✦ Param Raj</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-content">
+      <p class="greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Param Raj</h1>
+      <p class="role">I'm a <span class="typed" id="typed"></span></p>
+      <p class="hero-desc">Passionate about building beautiful, fast & user-friendly web experiences.</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn primary"><i class="fas fa-rocket"></i> View Projects</a>
+        <a href="#contact" class="btn secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/raj-param" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/paramraj950/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="avatar-ring">
+        <div class="avatar">
+          <img src="https://i.ibb.co/Kj0GZmCd/IMG-20260611-210838.jpg" alt="Param Raj" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <p>Computer Science student at Parul University passionate about full-stack development. I build responsive web and mobile apps using React.js, Node.js, Java, and more. Solved 200+ coding problems on LeetCode and love turning ideas into real digital experiences.</p>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+          <h3>3+</h3><p>Projects</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>200+</h3><p>Problems Solved</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon"><i class="fas fa-tools"></i></div>
+          <h3>10+</h3><p>Technologies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><i class="fab fa-html5" style="color:#e44d26"></i><p>HTML5</p></div>
+      <div class="skill-card"><i class="fab fa-css3-alt" style="color:#264de4"></i><p>CSS3</p></div>
+      <div class="skill-card"><i class="fab fa-js" style="color:#f7df1e"></i><p>JavaScript</p></div>
+      <div class="skill-card"><i class="fab fa-react" style="color:#61dafb"></i><p>React</p></div>
+      <div class="skill-card"><i class="fab fa-java" style="color:#007396"></i><p>Java</p></div>
+      <div class="skill-card"><i class="fab fa-python" style="color:#3776ab"></i><p>Python</p></div>
+      <div class="skill-card"><i class="fab fa-node-js" style="color:#339933"></i><p>Node.js</p></div>
+      <div class="skill-card"><i class="fab fa-git-alt" style="color:#f05032"></i><p>Git</p></div>
+      <div class="skill-card"><i class="fas fa-database" style="color:#6c63ff"></i><p>SQL</p></div>
+      <div class="skill-card"><i class="fab fa-android" style="color:#3ddc84"></i><p>Android</p></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2 class="section-title">My Projects</h2>
+
+    <!-- Filter Tabs -->
+    <div class="project-filters">
+      <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+      <button class="filter-btn" onclick="filterProjects('fullstack', this)">Full Stack</button>
+      <button class="filter-btn" onclick="filterProjects('frontend', this)">Frontend</button>
+      <button class="filter-btn" onclick="filterProjects('mobile', this)">Mobile</button>
+    </div>
+
+    <!-- Featured Project -->
+    <div class="project-featured" data-cat="fullstack">
+      <div class="featured-banner">
+        <span class="featured-badge"><i class="fas fa-star"></i> Featured Project</span>
+        <div class="featured-icon"><i class="fas fa-plane-departure"></i></div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-meta">
+          <span class="featured-label">Full Stack • React + Node.js</span>
+          <h3>Tour & Travel Planner</h3>
+          <p>A complete full-stack travel guide platform with destination browsing, trip booking, user authentication, and a responsive dashboard. Built with React on the frontend and Node.js + MongoDB on the backend.</p>
+          <div class="project-tags">
+            <span>React</span><span>Node.js</span><span>MongoDB</span><span>REST API</span>
+          </div>
+        </div>
+        <div class="featured-links">
+          <a href="https://github.com/raj-param" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+          <a href="#" class="btn primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="projects-grid">
+      <div class="project-card" data-cat="frontend">
+        <div class="project-header" style="background: linear-gradient(135deg,#ff416c,#ff4b2b)">
+          <i class="fab fa-youtube"></i>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>YouTube Clone</h3>
+            <div class="project-links">
+              <a href="https://github.com/raj-param" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <p>A fully responsive YouTube clone with video listing, search functionality, and playback built with HTML, CSS & JavaScript.</p>
+          <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        </div>
+      </div>
+
+      <div class="project-card" data-cat="mobile">
+        <div class="project-header" style="background: linear-gradient(135deg,#11998e,#38ef7d)">
+          <i class="fas fa-music"></i>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <h3>Music Player</h3>
+            <div class="project-links">
+              <a href="https://github.com/raj-param" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <p>A responsive music player with playlist management and audio controls built with Android Studio.</p>
+          <div class="project-tags"><span>Java</span><span>Android Studio</span><span>XML</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="section bg-light">
+    <h2 class="section-title">Resume</h2>
+    <div class="resume-content">
+      <div class="resume-col">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="timeline-item">
+          <span class="timeline-year">2023–2027</span>
+          <h4>B.Tech in Computer Science</h4>
+          <p>Parul University</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2020–2022</span>
+          <h4>Higher Secondary (12th)</h4>
+          <p>New Era Public School</p>
+        </div>
+      </div>
+      <div class="resume-col">
+        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+        <div class="timeline-item">
+          <span class="timeline-year">2024</span>
+          <h4>AWS Academy Cloud Foundations</h4>
+          <p>Amazon Web Services</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-year">2023</span>
+          <h4>Full Stack Web Development</h4>
+          <p>Online Certification</p>
+        </div>
+      </div>
+    </div>
+    <div class="resume-download">
+      <a href="https://drive.google.com/file/d/1_43BO6g0HexMwwWwLzjZVpLoARoXiSOf/view?usp=share_link" target="_blank" class="btn primary"><i class="fas fa-eye"></i> View Resume</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Let's Talk 🚀</h3>
+        <p>I'm open to freelance projects, internships, and collaborations. Feel free to reach out!</p>
+        <div class="contact-item"><i class="fas fa-envelope"></i><p>paramraj9955@gmail.com</p></div>
+        <div class="contact-item"><i class="fas fa-phone"></i><p>+91 9507646938</p></div>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Patna, India</p></div>
+        <div class="social-links">
+          <a href="https://github.com/raj-param" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/paramraj950/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:paramraj9955@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input type="text" placeholder="Your Name" required />
+        </div>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Your Email" required />
+        </div>
+        <div class="input-group textarea-group">
+          <i class="fas fa-comment"></i>
+          <textarea rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+        <p class="form-msg" id="formMsg"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Designed & Built with ❤️ by <span>Param Raj</span> © 2025</p>
+    <div class="footer-socials">
+      <a href="https://github.com/raj-param" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/paramraj950/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
